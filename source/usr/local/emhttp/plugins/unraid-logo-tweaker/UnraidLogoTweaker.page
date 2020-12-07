@@ -1,0 +1,48 @@
+Menu="WebGui"
+Icon="unraid-logo-tweaker.png"
+Title="Logo Tweaker"
+---
+<?php
+// Parse variables from the configuration file
+include_once('/plugins/unraid-logo-tweaker/include/parse.php');
+?>
+
+<style>
+.orange {
+    font-family: clear-sans;
+    font-size: 1.1rem;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: #ff8c2f;
+}
+</style>
+
+<p style="margin:0 0 30px 0"><strong>Please note:</strong> There is no field validation; please ensure that your values are correct. Leave bank for none/default.</p>
+
+<form markdown="1" name="unraid_logo_tweaker_settings" id="unraid_logo_tweaker_settings" method="POST" action="/update.php" target="progressFrame" onsubmit="saveSettings();">
+<table border="0" cellspacing="4">
+    <tr>
+        <td width="200"><label class="orange" for="logo_url">URL:</label></td><td><input type="text" name="logo_url" id="logo_url" placeholder="Example: /Main" value="<?php print($cfg['logo_url']); ?>"/></td>
+    </tr>
+    <tr>
+        <td width="200"><label class="orange" for="logo_img">base64 .png:</label></td><td><textarea name="logo_img" id="logo_img" rows="10"><?php print($cfg['logo_img']); ?></textarea></td>
+    </tr>
+    <tr>
+        <td width="200"><label class="orange" for="logo_img_margin">CSS Margins:</label></td><td><input type="text" name="logo_img_margin" id="logo_img_margin" placeholder="Example: 25px 50px 8px 0" value="<?php print($cfg['logo_img_margin']); ?>"/></td>
+    </tr>
+</table>
+<input type="submit" value="Save">
+</form>
+
+<script>
+// Take the values of the textboxes and post their values to includes/save.php
+function saveSettings() {
+	var logo_url = document.getElementById("logo_url").value;
+	var logo_img = document.getElementById("logo_img").value;
+    var logo_img_margin = document.getElementById("logo_img_margin").value;
+	$.post("/plugins/unraid-logo-tweaker/include/save.php", { logo_url: logo_url, logo_img: logo_img, logo_img_margin: logo_img_margin })
+		.done(function(data) {
+	});
+}
+</script>

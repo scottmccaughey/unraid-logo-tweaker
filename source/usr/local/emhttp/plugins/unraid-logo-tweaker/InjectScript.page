@@ -1,0 +1,30 @@
+Menu='Buttons'
+Link='nav-user'
+---
+<?php
+// Parse variables from the configuration file
+include_once('/plugins/unraid-logo-tweaker/include/parse.php');
+?>
+
+<script>
+// <Unraid Logo Tweaker>
+var target = document.querySelector('.logo');
+var logo_url = '<?php print($cfg['logo_url']); ?>';
+var logo_img = '<?php print($cfg['logo_img']); ?>';
+var logo_img_margin = '<?php print($cfg['logo_img_margin']); ?>';
+// Set the new logo URL
+if (logo_url.length !== 0) {
+    // Remove target="_blank" -- this is personal preference and may be an user-selectable option at some point ([X] Open in New Window)
+    target.children[0].removeAttribute('target');
+    // Empty the href tag in case the user didn't include http:// or https://
+    target.children[0].setAttribute('href','');
+    // Apply the value of logo_url to the Unraid logo
+    target.children[0].setAttribute('href',logo_url);
+}
+// Set the new logo image
+if (logo_img.length !== 0) {
+    // Replace the Unraid logo with custom Base64 PNG and margins (users may inject additional CSS following their margin)
+    target.children[0].innerHTML = '<img style="margin: ' + logo_img_margin + ';" src="data:image/png;base64,' + logo_img + '">';
+}
+// </Unraid Logo Tweaker>
+</script>
