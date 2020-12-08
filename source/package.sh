@@ -4,6 +4,9 @@
 # Local environment path
 cd /Volumes/Development/git/unraid-logo-tweaker/source
 
+# Clean up all those nasty ._ files so they don't get put in the package
+dot_clean -n .
+
 # Create temporary directory and copy over the usr and boot folders
 mkdir tmp
 cp -R usr tmp

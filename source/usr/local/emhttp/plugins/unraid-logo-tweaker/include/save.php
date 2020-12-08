@@ -1,5 +1,5 @@
 <?php
-// Variables for convienence
+// Variables for convenience
 $name = "unraid-logo-tweaker";
 $pluginDir = "/boot/config/plugins/" . $name;
 $logo_url = $_POST["logo_url"];

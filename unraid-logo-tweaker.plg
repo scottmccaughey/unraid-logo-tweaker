@@ -4,9 +4,9 @@
 <!ENTITY name       "unraid-logo-tweaker">
 <!ENTITY author     "Joel Lombardo">
 <!ENTITY github     "joellombardo">
-<!ENTITY version    "2020.12.7">
+<!ENTITY version    "2020.12.7a">
 <!ENTITY launch     "Tools/UnraidLogoTweaker">
-<!ENTITY md5        "948aaca4e9de6a7d961b2f9d4da70493"> 
+<!ENTITY md5        "7f5d79383112cc7b98eab40ca91dc265"> 
 <!ENTITY pluginURL  "https://raw.githubusercontent.com/&github;/&name;/master/&name;.plg">
 <!ENTITY pluginDir  "/boot/config/plugins/&name;">
 <!ENTITY webGuiDir  "/usr/local/emhttp/plugins/&name;">
@@ -24,8 +24,8 @@ By Joel Lombardo (joellombardo.com / @joellombardo)
 No license has been attached to this project as of version 2020.12.07.
 
 *** CREDITS ***
-- Squid for helping in this forum thread:  https://forums.unraid.net/topic/99402-how-to-inject-javascript-into-webgui-in-my-plugin
-- dlandon for documenting in this thread:  https://forums.unraid.net/topic/33322-how-does-the-plugin-system-work-documentation-added-wip/
+- Squid for helping in this forum thread:    https://forums.unraid.net/topic/99402-how-to-inject-javascript-into-webgui-in-my-plugin
+- dlandon for documentation in this thread:  https://forums.unraid.net/topic/33322-how-does-the-plugin-system-work-documentation-added-wip/
 -->
 
 <!-- Get the plugin package from the Github repo -->

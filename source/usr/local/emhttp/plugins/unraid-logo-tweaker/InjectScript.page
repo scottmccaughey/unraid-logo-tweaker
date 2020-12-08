@@ -3,7 +3,7 @@ Link='nav-user'
 ---
 <?php
 // Parse variables from the configuration file
-include_once('/plugins/unraid-logo-tweaker/include/parse.php');
+include_once('/usr/local/emhttp/plugins/unraid-logo-tweaker/include/parse.php');
 ?>
 
 <script>
@@ -24,7 +24,7 @@ if (logo_url.length !== 0) {
 // Set the new logo image
 if (logo_img.length !== 0) {
     // Replace the Unraid logo with custom Base64 PNG and margins (users may inject additional CSS following their margin)
-    target.children[0].innerHTML = '<img style="margin: ' + logo_img_margin + ';" src="data:image/png;base64,' + logo_img + '">';
+    target.children[0].innerHTML = '<img style="max-width: 160px; margin: ' + logo_img_margin + ';" src="data:image/png;base64,' + logo_img + '">';
 }
 // </Unraid Logo Tweaker>
 </script>

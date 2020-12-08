@@ -4,7 +4,7 @@ Title="Logo Tweaker"
 ---
 <?php
 // Parse variables from the configuration file
-include_once('/plugins/unraid-logo-tweaker/include/parse.php');
+include_once('/usr/local/emhttp/plugins/unraid-logo-tweaker/include/parse.php');
 ?>
 
 <style>
