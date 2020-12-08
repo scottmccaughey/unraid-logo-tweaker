@@ -1,3 +1,6 @@
+https://github.com/joellombardo/unraid-logo-tweaker/raw/main/assets/screenshot.png
+![Unraid Logo Tweaker screenshot](/assets/screenshot.png?raw=true "Unraid Logo Tweaker plugin settings page")
+
 # Unraid Logo Tweaker
 
 This plugin allows you to customize the WebGui Unraid logo. You can set a custom URL (e.g., an Unraid page/tab, your server IP, or local DNS lookup) and replace the logo with your own base64-encoded PNG image.
