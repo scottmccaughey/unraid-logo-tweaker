@@ -1,4 +1,3 @@
-https://github.com/joellombardo/unraid-logo-tweaker/raw/main/assets/screenshot.png
 ![Unraid Logo Tweaker screenshot](/assets/screenshot.png?raw=true "Unraid Logo Tweaker plugin settings page")
 
 # Unraid Logo Tweaker
